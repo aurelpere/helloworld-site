@@ -4,9 +4,9 @@ install:
 format:
 	yapf -ir -vv --style pep8 .
 lint:
-	for i in *.py; do pylint --disable=R,C -sy $$i; done
-test:
-	pytest -vv --cov=. *.py --cov-report xml:reports/coverage/coverage.xml
+	for i in $(find . -type f -regex '.*\.py' -print); do pylint --disable=R,C -sy $i; done
+testing:
+	pytest -vv --cov=. . --cov-report xml:reports/coverage/coverage.xml
 coverage_badge:
 	genbadge coverage
 cleaning:
@@ -16,4 +16,4 @@ git:
 	git config --local user.name "aurelpere"
 	git add coverage-badge.svg
 	git commit --allow-empty -m "Updating the test coverage badge"
-all: install format lint test coverage_badge cleaning
+all: install format lint testing coverage_badge cleaning
