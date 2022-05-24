@@ -17,7 +17,7 @@ jobs: # This workflow contains a single job called "build"
         make lint
     - name: test with pytest
       run: |
-        make test
+        make testing
     - name : format with yapf
       run: |
         make format
