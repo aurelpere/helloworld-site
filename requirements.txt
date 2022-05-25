@@ -4,4 +4,7 @@ pytest-cov
 yapf
 genbadge
 defusedxml
-flask
+django
+wagtail
+sys
+dj_database_url
