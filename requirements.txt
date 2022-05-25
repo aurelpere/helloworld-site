@@ -4,7 +4,6 @@ pytest-cov
 yapf
 genbadge
 defusedxml
-django==3.2
-wagtail==2.16
-sys
+django
+wagtail
 dj_database_url
