@@ -1,6 +1,5 @@
 install:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	pip install --upgrade pip && pip install –upgrade setuptools && pip install -r requirements.txt
 format:
 	yapf -ir -vv --style pep8 .
 lint:
