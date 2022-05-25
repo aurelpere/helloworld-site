@@ -7,3 +7,4 @@ defusedxml
 django
 wagtail
 dj_database_url
+zappa
