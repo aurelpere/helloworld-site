@@ -5,10 +5,10 @@ jobs: # This workflow contains a single job called "build"
     runs-on: ubuntu-latest # The type of runner that the job will run on
     steps: # Steps represent a sequence of tasks that will be executed as part of the job
     - uses: actions/checkout@v2 # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - name: set up python 3.8 
+    - name: set up python 3.9 
       uses: actions/setup-python@v1
       with:
-        python-version: 3.8
+        python-version: 3.9
     - name: Install dependencies # Runs commands using the runners shell
       run: |
         make install 
